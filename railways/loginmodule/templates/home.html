@@ -1,0 +1,79 @@
+
+{% extends 'base.html' %} {% block content %}
+  <form action="/bookticket/search/" method="post">
+{% csrf_token %} 
+
+
+<div class="container-fluid" style="background-image: url('/static/images/img3.jpg'); background-size:100% 100% ">
+<br></br>
+
+
+<br><br><br><br><br><br><br><br><br>
+
+<div class="container  bg- text-white" >
+<br><br>
+
+  <div class="row">
+    <div class="col-sm">
+      <input type="text" class="form-control" placeholder="Source" name="source"  required>
+      
+    </div>
+    <div class="col-sm">
+    <input type="text" class="form-control" placeholder="Destination" name="dest" required>
+    </div>
+    <div class="col-sm">
+        <input type="date" class="form-control" id="date" aria-describedby="" required>
+    </div>
+    &nbsp;   &nbsp;   &nbsp;
+      <div class="col-sm">
+     <button type="submit" class="btn btn-primary">Search</button> </div>
+  </div>
+  <br><br>
+</div>
+<br><br><br><br><br><br><br><br><br>
+
+
+</div>
+
+  <div  align="center" >
+
+
+
+<br><br>
+  <h1>Why Choose GujaratRail for Train Booking?</h1>
+  <br><br>
+<div class="card-deck" style="max-width: 800px;">
+  <div class="card" >
+  <img src="/static/images/24-7.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">24*7 Customer Service </h5>
+      <p class="card-text">We work 24 hours a day to make sure our availability whenever our customers need us.</p>
+    </div>
+    
+ 
+  </div>
+     &nbsp; 
+  <div class="card" >
+  <img src="/static/images/1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Our Train</h5>
+      <p class="card-text">Get a complete list of trains that shall be arriving at the railway station of your choice at the time selected by you.  </p>
+    </div>
+    
+  </div>
+
+<div class="card" >
+  <img src="/static/images/refunds.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Instant Refunds</h5>
+      <p class="card-text">Get Refunds instantly on cancellation of IndianRail train tickets  </p>
+    </div>
+    
+ 
+</div>
+</div>
+</form>
+
+<br><br>
+{%endblock%}
+

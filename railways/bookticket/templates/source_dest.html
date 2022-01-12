@@ -1,0 +1,49 @@
+{% extends 'base1.html' %} {% block content %}
+{% if form.errors %}
+
+{% endif %}
+<div class="source-dest" align="center">
+<form action="/bookticket/search/" method="post">
+{% csrf_token %} 
+
+
+<br><br>
+<h2>
+<img src="/static/images/railicon.png"  class="rounded-circle"  class="rounded" alt="Cinque Terre" width="90" height="90">
+Search.Book.Go</h2>
+<br><br>
+<div class="container-fluid">
+
+    <div class="deprature_div">
+    
+    <div class="row">
+        <div class="col">
+        <label for="source" class="form-lable"><b>From</b></label>
+        <input list="source" class="form-control" placeholder="Source" name="source"  required>
+            <datalist id="source">
+                <option value="Surat"><option value="Ahmedabad"><option value="Vadodara">
+                <option value="Bhuj"><option value="Bhavnagar"><option value="Rajkot">
+            </datalist>
+        </div>
+        <div class="col">
+        <label for="dest"class="form-lable"><b>To</b></label>
+        <input list="dest" class="form-control" placeholder="Destination" name="dest" >
+            <datalist id="dest">
+                <option value="Surat"><option value="Ahmedabad"><option value="bhavnagar">
+                <option value="Vadodara"><option value="Rajkot">
+                <option value="Porbandar"><option value="Bhuj">
+            </datalist>
+        </div>
+        </div><br>
+        <label for="date" class="form-lable"><b>Departure Date</b></label>
+        <input type="date" class="form-control" id="date" aria-describedby="" required>
+        <br><br>
+      <div class="text-center">
+      <input type="submit" class="btn btn-primary" value="search" name = "search"></div><br><br>
+</div></div>
+</form></div>
+
+<br><br><br>
+
+    {% endblock %}
+  
